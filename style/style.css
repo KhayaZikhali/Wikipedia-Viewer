@@ -1,0 +1,53 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #1d3d5a;
+  overflow: -moz-hidden-unscrollable;
+}
+
+.search-bar {
+  width: 400px;
+  height: 30px;
+  font-size: x-large;
+  border: 10px solid #be5b0a;
+  background-color: transparent;
+  color: #bbff00;
+  border-radius: 50px;
+  padding: 20px;
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.search-bar:focus {
+  outline: none;
+}
+
+p {
+  position: absolute;
+  left: 50vw;
+  top: 34vh;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+p:hover {
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+p a {
+  text-decoration: none;
+}
+
+p a:visited {
+  text-decoration: none;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

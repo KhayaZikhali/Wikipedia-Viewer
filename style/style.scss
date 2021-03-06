@@ -1,0 +1,50 @@
+$primary-color : rgb(29, 61, 90);
+$secondary-color: rgb(190, 91, 10) ;
+$tertiary-color: rgb(187, 255, 0) ;
+
+body {
+    width:100%;
+    height: 100%;
+    background-color: $primary-color;
+    overflow: -moz-hidden-unscrollable;
+}
+
+
+//turn this into a magnifying glass div 
+.search-bar {
+   width: 400px;
+   height: 30px;
+   font-size: x-large;
+   border:10px solid $secondary-color;
+   background-color: transparent;
+   color:$tertiary-color;
+   border-radius: 50px;
+   padding:20px;
+   position: absolute;
+   left: 50vw;
+   top:50vh;
+   transform: translate(-50%, -50%);
+    &:focus{
+        outline: none;
+    }
+}
+
+p {
+    position: absolute;
+    left: 50vw;
+    top:34vh;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    transition: 0.5s;
+    &:hover {
+        color:white;
+        transition: 0.5s;
+    }
+    a {
+        text-decoration: none;
+        &:visited{
+            text-decoration: none;
+            color:white
+        }
+    }
+}
