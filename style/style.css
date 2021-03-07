@@ -25,6 +25,16 @@ body {
   outline: none;
 }
 
+.results {
+  -webkit-transition: 1s;
+  transition: 1s;
+  position: absolute;
+  left: 23vw;
+  top: 10vh;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 p {
   position: absolute;
   left: 50vw;
@@ -49,5 +59,13 @@ p a {
 p a:visited {
   text-decoration: none;
   color: white;
+}
+
+.close {
+  position: absolute;
+  left: 65vw;
+  top: 50vh;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=style.css.map */

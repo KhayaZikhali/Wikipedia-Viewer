@@ -9,7 +9,6 @@ body {
     overflow: -moz-hidden-unscrollable;
 }
 
-
 //turn this into a magnifying glass div 
 .search-bar {
    width: 400px;
@@ -29,6 +28,16 @@ body {
     }
 }
 
+.results {
+    transition: 1s ;
+    position: absolute;
+    left: 23vw;
+    top:10vh;
+    transform: translate(-50%, -50%);
+}
+
+
+
 p {
     position: absolute;
     left: 50vw;
@@ -47,4 +56,11 @@ p {
             color:white
         }
     }
+}
+
+.close{
+    position: absolute;
+    left: 65vw;
+    top:50vh;
+    transform: translate(-50%, -50%);
 }
