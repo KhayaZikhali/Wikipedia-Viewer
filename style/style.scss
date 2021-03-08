@@ -7,6 +7,7 @@ body {
     height: 100%;
     background-color: $primary-color;
     overflow: -moz-hidden-unscrollable;
+    position: relative;
 }
 
 //turn this into a magnifying glass div 
@@ -19,9 +20,9 @@ body {
    color:$tertiary-color;
    border-radius: 50px;
    padding:20px;
-   position: absolute;
-   left: 50vw;
-   top:50vh;
+   position: relative;
+   margin-left: 50vw;
+   margin-top:50vh;
    transform: translate(-50%, -50%);
     &:focus{
         outline: none;
@@ -31,14 +32,12 @@ body {
 .results {
     transition: 1s ;
     position: absolute;
-    left: 23vw;
-    top:10vh;
+    margin-left: 50vw;
+    margin-top:15vh;
     transform: translate(-50%, -50%);
 }
 
-
-
-p {
+.random {
     position: absolute;
     left: 50vw;
     top:34vh;
@@ -58,9 +57,48 @@ p {
     }
 }
 
-.close{
+.result-bar {
+    background-color: transparent;
+    height: fit-content;
+    text-align: center;
+    width: 60vw;
+    position: relative;
+    left: 20vw;
+    top: 60vh;
+    background-color: aliceblue;
+    transition: 1s;
+    padding:10px;
+    &:hover{
+        border-right: 5px $secondary-color ;
+    }
+}
+
+.after {
     position: absolute;
-    left: 65vw;
-    top:50vh;
+    left: 50vw;
+    margin-top: 50vh;
     transform: translate(-50%, -50%);
+    height: fit-content;
+    display: contents;
+    background-color: blue;
+}
+
+.result {
+    background-color: red;
+    margin: auto;
+    margin-top: 5vh;
+    height: 20px;
+    width:40vw;
+    h1 {
+        font-size: large;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    p{
+        font-size:medium;
+    }
+    a {
+        position: inherit;
+        right: 0;
+    }
 }

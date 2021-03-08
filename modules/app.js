@@ -37,6 +37,7 @@ let userInput;
 
 let link = document.querySelector('p'); 
 let  userInput = document.querySelector(".search-bar");
+let resultsbar = document.querySelector(".result-bar");
 
 document.addEventListener("keyup", (event) => {
   if (event.key === "Enter"){
@@ -48,6 +49,7 @@ document.addEventListener("keyup", (event) => {
 function search(input){
 // move the search bar to the final position
 userInput.classList.add("results")
+resultsbar.classList.add("after")
 link.style.display = "none";
 var url = "https://en.wikipedia.org/w/api.php"; 
 var params = {
@@ -65,7 +67,10 @@ fetch(url)
       console.log(data.query.search)
       for ( x in data.query.search){
         console.log(x)
-        //for every result create a div with  
+        //for every result create a div with 
+        const result = document.createElement('div')
+        result.classList.add("result")
+        resultsbar.append(result)
       }
     })
 

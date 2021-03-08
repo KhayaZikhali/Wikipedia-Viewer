@@ -3,6 +3,7 @@ body {
   height: 100%;
   background-color: #1d3d5a;
   overflow: -moz-hidden-unscrollable;
+  position: relative;
 }
 
 .search-bar {
@@ -14,9 +15,9 @@ body {
   color: #bbff00;
   border-radius: 50px;
   padding: 20px;
-  position: absolute;
-  left: 50vw;
-  top: 50vh;
+  position: relative;
+  margin-left: 50vw;
+  margin-top: 50vh;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -29,13 +30,13 @@ body {
   -webkit-transition: 1s;
   transition: 1s;
   position: absolute;
-  left: 23vw;
-  top: 10vh;
+  margin-left: 50vw;
+  margin-top: 15vh;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-p {
+.random {
   position: absolute;
   left: 50vw;
   top: 34vh;
@@ -46,26 +47,74 @@ p {
   transition: 0.5s;
 }
 
-p:hover {
+.random:hover {
   color: white;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-p a {
+.random a {
   text-decoration: none;
 }
 
-p a:visited {
+.random a:visited {
   text-decoration: none;
   color: white;
 }
 
-.close {
+.result-bar {
+  background-color: transparent;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  width: 60vw;
+  position: relative;
+  left: 20vw;
+  top: 60vh;
+  background-color: aliceblue;
+  -webkit-transition: 1s;
+  transition: 1s;
+  padding: 10px;
+}
+
+.result-bar:hover {
+  border-right: 5px #be5b0a;
+}
+
+.after {
   position: absolute;
-  left: 65vw;
-  top: 50vh;
+  left: 50vw;
+  margin-top: 50vh;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: contents;
+  background-color: blue;
+}
+
+.result {
+  background-color: red;
+  margin: auto;
+  margin-top: 5vh;
+  height: 20px;
+  width: 40vw;
+}
+
+.result h1 {
+  font-size: large;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.result p {
+  font-size: medium;
+}
+
+.result a {
+  position: inherit;
+  right: 0;
 }
 /*# sourceMappingURL=style.css.map */
