@@ -41,7 +41,6 @@ let resultsbar = document.querySelector(".result-bar");
 
 document.addEventListener("keyup", (event) => {
   if (event.key === "Enter"){
-    console.log(userInput.value);
     search(userInput.value);
   }
 })
@@ -69,10 +68,31 @@ fetch(url)
         console.log(x)
         //for every result create a div with 
         const result = document.createElement('div')
-        result.classList.add("result")
         resultsbar.append(result)
+        result.classList.add("result")
+        const paragraph = document.createElement('p')
+        result.textContent = data.query.search[x].title
+        paragraph.textContent =  data.query.search[x].snippet.replace(/<\/?[^>]+>/gi,'')
+        result.onclick = () => {
+
+        }
+        result.appendChild(paragraph)
+
       }
     })
 
     .catch(function(error){console.log(error);});
 }
+
+//create a create function
+createCard = () => {
+  // title of the card
+  const result = document.createElement('div')
+  result.classList.add("result")
+  const paragraph = document.createElement('p')
+  const link = document.createElement('p')
+  result.textContent = data.query.search[1].title
+  paragraph.textContent =  data.query.search[1].snippet
+  // th snippet 
+  // the link 
+} 

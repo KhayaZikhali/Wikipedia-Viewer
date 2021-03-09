@@ -8,6 +8,7 @@ body {
     background-color: $primary-color;
     overflow: -moz-hidden-unscrollable;
     position: relative;
+    padding-top: 10vh;
 }
 
 //turn this into a magnifying glass div 
@@ -33,7 +34,7 @@ body {
     transition: 1s ;
     position: absolute;
     margin-left: 50vw;
-    margin-top:15vh;
+    margin-top:-8vh;
     transform: translate(-50%, -50%);
 }
 
@@ -58,19 +59,15 @@ body {
 }
 
 .result-bar {
-    background-color: transparent;
     height: fit-content;
     text-align: center;
-    width: 60vw;
+    width: 40vw;
     position: relative;
-    left: 20vw;
-    top: 60vh;
-    background-color: aliceblue;
+    left: 30vw;
+    top: 25vh;
+    background-color: red;
     transition: 1s;
     padding:10px;
-    &:hover{
-        border-right: 5px $secondary-color ;
-    }
 }
 
 .after {
@@ -84,11 +81,11 @@ body {
 }
 
 .result {
-    background-color: red;
+    background-color: transparent;
     margin: auto;
     margin-top: 5vh;
-    height: 20px;
-    width:40vw;
+    height: fit-content;
+    width:60vw;
     h1 {
         font-size: large;
         text-decoration: underline;
