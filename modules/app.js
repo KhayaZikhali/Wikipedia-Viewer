@@ -36,9 +36,18 @@ let userInput;
  */
 
 let link = document.querySelector('p'); 
-let  userInput = document.querySelector(".search-bar");
+let userInput = document.querySelector(".search-bar");
 let resultsbar = document.querySelector(".result-bar");
+let randomArticle = document.querySelector(".random")
 
+
+randomArticle.addEventListener('click', () => {
+  RandomSource()
+});
+
+
+
+//! i actually forgot whats happenning here 
 document.addEventListener("keyup", (event) => {
   if (event.key === "Enter"){
     search(userInput.value);
@@ -50,6 +59,7 @@ function search(input){
 userInput.classList.add("results")
 resultsbar.classList.add("after")
 link.style.display = "none";
+// this is the fucking url of the wikipedia site
 var url = "https://en.wikipedia.org/w/api.php"; 
 var params = {
     action: "query",
@@ -58,8 +68,9 @@ var params = {
     format: "json"
 };
 url = url + "?origin=*";
+// this does something
 Object.keys(params).forEach(function(key){url += "&" + key + "=" + params[key];});
-
+// fetch the url 
 fetch(url)
     .then(function(response){return response.json();})
     .then(data => {
@@ -70,17 +81,15 @@ fetch(url)
         const result = document.createElement('div')
         resultsbar.append(result)
         result.classList.add("result")
+        // this is div for the snippet
         const paragraph = document.createElement('p')
         result.textContent = data.query.search[x].title
+        //replace HTML tags with emoty space 
         paragraph.textContent =  data.query.search[x].snippet.replace(/<\/?[^>]+>/gi,'')
-        result.onclick = () => {
-
-        }
         result.appendChild(paragraph)
 
       }
     })
-
     .catch(function(error){console.log(error);});
 }
 
