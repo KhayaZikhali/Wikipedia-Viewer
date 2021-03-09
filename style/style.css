@@ -18,7 +18,7 @@ body {
   padding: 20px;
   position: relative;
   margin-left: 50vw;
-  margin-top: 50vh;
+  margin-top: 40vh;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -52,6 +52,7 @@ body {
   color: white;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .random a {

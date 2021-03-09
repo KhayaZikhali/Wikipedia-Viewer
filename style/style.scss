@@ -23,7 +23,7 @@ body {
    padding:20px;
    position: relative;
    margin-left: 50vw;
-   margin-top:50vh;
+   margin-top:40vh;
    transform: translate(-50%, -50%);
     &:focus{
         outline: none;
@@ -48,6 +48,7 @@ body {
     &:hover {
         color:white;
         transition: 0.5s;
+        cursor: pointer;
     }
     a {
         text-decoration: none;

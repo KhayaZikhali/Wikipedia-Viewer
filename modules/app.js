@@ -40,13 +40,6 @@ let userInput = document.querySelector(".search-bar");
 let resultsbar = document.querySelector(".result-bar");
 let randomArticle = document.querySelector(".random")
 
-
-randomArticle.addEventListener('click', () => {
-  RandomSource()
-});
-
-
-
 //! i actually forgot whats happenning here 
 document.addEventListener("keyup", (event) => {
   if (event.key === "Enter"){
