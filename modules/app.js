@@ -92,7 +92,6 @@ createCard = () => {
   const result = document.createElement('div')
   result.classList.add("result")
   const paragraph = document.createElement('p')
-  const link = document.createElement('p')
   result.textContent = data.query.search[1].title
   paragraph.textContent =  data.query.search[1].snippet
   // th snippet 
